@@ -49,7 +49,7 @@
         var has_ball = true;
         var is_in_tree = false;
         var crying = true;
-        //600
+        //900
         
         if (typeof(score) != "number") {
             score = 500;
@@ -65,7 +65,7 @@
             score = score - 77;
         } else {
             score = score;
-        } if (is_in_tree === true && typeof(last_play) != "number") { 
+        } if (is_in_tree && typeof last_play != "number") { 
             score = score + 395;
         } else {
             score = score;
@@ -75,11 +75,11 @@
             score = score * 3
         } else {
             score = score / 2;
-        }if (has_ball === true && is_in_tree === false && crying === false){
+        }if (has_ball && is_in_tree === false && crying === false){
             score = score * 1.5
         } else {
             score = score
-        } if (last_play === "number") {
+        } if (typeof(last_play) === "number") {
             score = score * last_play
         } else {
             score = score
